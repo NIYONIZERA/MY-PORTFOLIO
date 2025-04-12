@@ -1,0 +1,26 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to my Personal Portfolio! This project showcases my skills, projects, and experience as a fullstack developer with expertise in Node.js, JavaScript, and React.js,next.js",
+  "main": "index.js",
+"scripts": {
+    "build": "tailwindcss -i ./styles.css -o ./dist/output.css --watch"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIYONIZERA/MY-PORTFOLIO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NIYONIZERA/MY-PORTFOLIO/issues"
+  },
+  "homepage": "https://github.com/NIYONIZERA/MY-PORTFOLIO#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}

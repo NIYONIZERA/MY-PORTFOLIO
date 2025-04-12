@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benigne | Portfolio</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const moreBtn = document.getElementById('moreBtn');
+      const moreContent = document.getElementById('moreContent');
+      const quoteEl = document.getElementById('quote');
+      const quotes = [
+        "Believe in yourself and all that you are.",
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "You are capable of amazing things.",
+        "Push yourself, because no one else is going to do it for you."
+      ];
+      quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+      moreBtn.addEventListener('click', () => {
+        moreContent.classList.toggle('hidden');
+        moreContent.classList.toggle('block');
+      });
+    });
+  </script>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f172a, #1e293b);
+    }
+    .glow-border {
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.7), 0 0 50px rgba(255, 0, 255, 0.5);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-cyan-400 animate-pulse">Benigne</h1>
+      <div class="space-x-6  md:block">
+        <a href="#" class="hover:text-cyan-400 transition">About Me</a>
+        <a href="#" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="min-h-screen flex flex-col justify-center items-center px-4 py-12">
+    <section class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl w-full">
+      <!-- Image Section -->
+      <figure class="relative animate-bounce">
+        <img src="./benigne-pic.jpg" alt="Benigne photo" class="w-60 h-60 rounded-full object-cover glow-border border-4 border-transparent">
+        <figcaption class="text-center mt-3 text-xl font-semibold">Benigne Niyonizera</figcaption>
+      </figure>
+
+      <!-- About Section -->
+      <article class="text-center md:text-left max-w-xl">
+        <h2 class="text-3xl font-bold mb-2">About <span class="text-cyan-400">Me</span></h2>
+        <h3 class="text-xl font-semibold mb-4">Full Stack Developer!</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Hi! I'm Benigne Niyonizera, a Full-Stack Developer passionate about crafting seamless, responsive, and accessible web applications. I build interactive frontend experiences with <strong>React.js</strong> and <strong>Next.js</strong>, and engineer robust backend solutions using <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>.
+        </p>
+        <p class="mt-4 text-cyan-400 italic" id="quote"></p>
+        <button id="moreBtn" class="mt-6 bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300">More About Me</button>
+
+        <div id="moreContent" class="hidden mt-4 text-gray-300 transition-all duration-300">
+          <p> Hobbies: Coding, UI/UX Design, Writing Tech Blogs</p>
+          <p> Skills: JavaScript, HTML, CSS, React, Node.js, MongoDB</p>
+        </div>
+      </article>
+    </section>
+
+    <address class="mt-8 text-sm text-gray-400 not-italic">
+      Kigali, Rwanda | Email: benigneniyonizera58@gmail.com | Phone: +250 782 806 704
+    </address>
+
+    <time class="text-xs text-gray-500 mt-2" datetime="2025-04-12">Last updated: April 12, 2025</time>
+  </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 md:px-20 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+          <!-- Left Info -->
+          <div>
+            <h2 class="text-3xl font-bold mb-2">Contact <span class="text-cyan-400">Me</span></h2>
+            <h3 class="text-lg font-semibold mb-4">Let's Work Together</h3>
+            <p class="text-gray-300 mb-6">Feel free to reach out with any questions, project ideas, or collaboration opportunities—I'd love to hear from you!</p>
+            <p class="mb-2 flex items-center gap-2"><span>📧</span> benigneniyonizera58@gmail.com</p>
+            <p class="mb-6 flex items-center gap-2"><span>📞</span> 0782806704</p>
+            <div class="flex gap-4">
+              <a href="#" class="text-cyan-400 border border-cyan-400 rounded-full w-9 h-9 flex items-center justify-center hover:bg-cyan-500 transition">F</a>
+              <a href="#" class="text-cyan-400 border border-cyan-400 rounded-full w-9 h-9 flex items-center justify-center hover:bg-cyan-500 transition">T</a>
+              <a href="#" class="text-cyan-400 border border-cyan-400 rounded-full w-9 h-9 flex items-center justify-center hover:bg-cyan-500 transition">I</a>
+              <a href="#" class="text-cyan-400 border border-cyan-400 rounded-full w-9 h-9 flex items-center justify-center hover:bg-cyan-500 transition">W</a>
+            </div>
+          </div>
+          <!-- Right Form -->
+          <form class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <input type="text" placeholder="Enter Your Name" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
+            <input type="email" placeholder="Enter Your Email" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
+            <input type="text" placeholder="Enter Your Subject" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
+            <textarea placeholder="Enter Your Message" rows="4" class="w-full mb-6 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+            <button type="submit" class="w-full py-2 rounded-md text-white font-semibold bg-gradient-to-r from-cyan-500 to-cyan-700 hover:from-cyan-600 hover:to-cyan-800 transition">Submit</button>
+          </form>
+        </div>
+      </section>
+
+ <!-- Footer -->
+ <footer class="bg-gray-900 text-gray-400 py-10 mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 text-center md:text-left">
+      <div>
+        <h4 class="text-white font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1">
+
+          <li><a href="#" class="hover:text-cyan-400">About</a></li>
+          <li><a href="#" class="hover:text-cyan-400">Projects</a></li>
+          <li><a href="#" class="hover:text-cyan-400">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-2">Follow Me</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-cyan-400">Twitter</a></li>
+          <li><a href="#" class="hover:text-cyan-400">LinkedIn</a></li>
+          <li><a href="#" class="hover:text-cyan-400">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <section class="bg-gray-950 text-center text-gray-500 text-xs py-4">
+    &copy; 2025 Benigne Niyonizera. All rights reserved.
+  </section>
+
+</body>
+</html>
