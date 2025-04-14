@@ -825,6 +825,62 @@ video {
   animation: spin 1s linear infinite;
 }
 
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
+}
+
+.scroll-mt-2 {
+  scroll-margin-top: 0.5rem;
+}
+
+.scroll-mt-28 {
+  scroll-margin-top: 7rem;
+}
+
+.scroll-mt-\[\] {
+  scroll-margin-top: ;
+}
+
+.scroll-mt-\[80px\] {
+  scroll-margin-top: 80px;
+}
+
+.scroll-mt-\[100\] {
+  scroll-margin-top: 100;
+}
+
+.scroll-mt-\[100px\] {
+  scroll-margin-top: 100px;
+}
+
+.scroll-mt-\[12px\] {
+  scroll-margin-top: 12px;
+}
+
+.scroll-mt-\[110px\] {
+  scroll-margin-top: 110px;
+}
+
+.scroll-mt-\[1px\] {
+  scroll-margin-top: 1px;
+}
+
+.scroll-mt-\[120px\] {
+  scroll-margin-top: 120px;
+}
+
+.scroll-mt-\[11px\] {
+  scroll-margin-top: 11px;
+}
+
+.scroll-mt-\[10px\] {
+  scroll-margin-top: 10px;
+}
+
+.scroll-mt-\[px\] {
+  scroll-margin-top: px;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -1114,6 +1170,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-center {
