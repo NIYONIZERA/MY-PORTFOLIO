@@ -39,7 +39,7 @@
       </figure>
 
       <!-- About Section -->
-      <article id="about" class="text-center md:text-left max-w-xl scroll-mt-[80px] ">
+      <article id="about" class="text-center md:text-left max-w-xl scroll-mt-[170px] ">
         <h2 class="text-3xl font-bold mb-2">About <span class="text-cyan-400">Me</span></h2>
         <h3 class="text-xl font-semibold mb-4">Full Stack Developer!</h3>
         <p class="text-gray-300 leading-relaxed">
@@ -105,6 +105,7 @@
         </div>
       </section>
   </main>
+  
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 px-6 md:px-20 bg-gray-800 text-white scroll-mt-20">
@@ -124,15 +125,18 @@
             </div>
           </div>
           <!-- Right Form -->
-          <form class="bg-gray-900 p-6 rounded-lg shadow-lg">
-            <input type="text" placeholder="Enter Your Name" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
-            <input type="email" placeholder="Enter Your Email" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
-            <input type="text" placeholder="Enter Your Subject" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
-            <textarea placeholder="Enter Your Message" rows="4" class="w-full mb-6 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+          <form id="contactForm" class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <input type="text" id="name" placeholder="Enter Your Name" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
+            <input type="email" id="email" placeholder="Enter Your Email" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
+            <input type="text" id="subject" placeholder="Enter Your Subject" class="w-full mb-4 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400">
+            <textarea id="message" placeholder="Enter Your Message" rows="4" class="w-full mb-6 px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
             <button type="submit" class="w-full py-2 rounded-md text-white font-semibold bg-gradient-to-r from-cyan-500 to-cyan-700 hover:from-cyan-600 hover:to-cyan-800 transition">Submit</button>
+            <p id="formError" class="text-cyan-500 mb-2 px-4 py-2"></p>
           </form>
+          
         </div>
       </section>
+      
 
  <!-- Footer -->
  <footer class="bg-gray-900 text-gray-400 py-10 mt-10">
@@ -184,6 +188,29 @@
         moreContent.classList.toggle('hidden');
         moreContent.classList.toggle('block');
       });
+    });
+//Validation of contact form.
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();// prevent default form submission
+
+        const name=document.getElementById("name").value.trim();
+        const email=document.getElementById("email").value.trim();
+        const subject=document.getElementById("subject").value.trim();
+        const message=document.getElementById("message").value.trim();
+        const errorDisplay = document.getElementById("formError");
+
+        errorDisplay.textContent="";
+        
+        if(name==="" || email===""|| subject===""||message===""){
+            errorDisplay.textContent="Please fill all fields";
+            return;
+        }
+
+  
+  errorDisplay.textContent="Message sent successful"
+
+  this.reset(); //this reset the form
+
     });
   </script>
 </body>
